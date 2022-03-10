@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  background-image: url("pattern-1.jpg");
+  background-attachment: fixed;
+  font-family: "Lateef", cursive;
+}
+* {
+  box-sizing: border-box;
+}
+
+.custom-box {
+  max-width: 800px;
+  background-color: #ffffcc;
+  margin: 30px auto;
+  padding: 50px 40px;
+  border-radius: 10px;
+}
+.quiz-home-box {
+  text-align: center;
+}
+.quiz-home-box.hide {
+  display: none;
+}
+.quiz-home-box h4 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #444444;
+  margin: 0 0 30px;
+}
+.btn {
+  background-color: #ffffcc;
+  border: 2px solid #202020;
+  padding: 14px 15px;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 0 10px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.quiz-box .stats {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.quiz-box .stats .time {
+  flex-basis: calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  /*background-color: red;*/
+  text-align: left;
+}
+.quiz-box .stats .time .remaining-time {
+  height: 60px;
+  width: 60px;
+  color: #006600;
+  border: 2px solid #006600;
+  font-weight: bold;
+  line-height: 56px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.quiz-box .stats .correct-answer {
+  font-weight: bold;
+}
+.quiz-box {
+  background-color: #ffffcc;
+}
+.quiz-box.hide {
+  display: none;
+}
+
+.quiz-box .question-box {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: 2px solid #c2af91;
+  position: relative;
+}
+
+.quiz-box .question-box .question-text {
+  font-size: 22px;
+  text-align: right;
+  direction: rtl;
+  font-weight: bold;
+  color: #665b49;
+}
+.quiz-box .question-box .current-question-number {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  border: 2px solid #c2af91;
+  font-size: 25px;
+  font-weight: bold;
+  color: #665b49;
+  border-radius: 50%;
+  line-height: 68px;
+  text-align: center;
+  position: absolute;
+  top: -35px;
+  left: 40%;
+  margin-left: 35px;
+  z-index: 1;
+}
+
+.quiz-box .option-box {
+  justify-content: space-between;
+  direction: rtl;
+}
+.quiz-box .option-box .option {
+  background-color: #fff;
+  flex-basis: calc(50% - 20px);
+  max-width: 100%;
+  padding: 13px 15px;
+  text-align: right;
+  margin-top: 30px;
+  font-weight: 500;
+  border: 2px solid #c2af91;
+  border-radius: 30px;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+.quiz-box .option-box .option.already-answered {
+  pointer-events: none;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.quiz-box .option-box .option.correct::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #66b2ff;
+  z-index: -1;
+  animation: slideInRight 0.5s ease forwards;
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(+100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.quiz-box .option-box .option.correct {
+  color: #ffffff;
+}
+.quiz-box .option-box .option.wrong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #66b2ff;
+  z-index: -1;
+  animation: slideInRight 0.5s ease forwards;
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(+100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.quiz-box .option-box .option.wrong {
+  color: #ffffff;
+}
+
+.quiz-box .question-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.quiz-over-box {
+  text-align: center;
+}
+.quiz-over-box.hide {
+  display: none;
+}
+.quiz-over-box h1 {
+  font-size: 50px;
+  color: #f85943;
+  margin: 0 0 20px;
+}
+.quiz-over-box h4 {
+  font-size: 25px;
+  font-weight: normal;
+  color: #202020;
+  margin: 15px 0 25px;
+}
+.quiz-over-box h4 span {
+  font-weight: 1000;
+  color: #000000;
+}
+
+.back-to-mainpage,
+.print {
+  margin-top: 15px;
+}
+.back-to-mainpage a {
+  text-decoration: none;
+  color: #000000;
+}

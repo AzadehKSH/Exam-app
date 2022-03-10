@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آزمون</title>
+    <link rel="stylesheet" href="quiz.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri&family=Lateef&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="quiz-home-box custom-box">
+      <h4>زمان آزمون 20 دقیقه است</h4>
+      <button type="button" class="start-quiz-btn btn" onclick="startQuiz()">
+        شروع آزمون
+      </button>
+    </div>
+    <div class="quiz-box custom-box hide">
+      <div class="stats">
+        <div class="time">
+          <div class="remaining-time">20</div>
+        </div>
+      </div>
+      <div class="question-box">
+        <div class="current-question-number"></div>
+
+        <div class="question-text"></div>
+      </div>
+      <div class="option-box"></div>
+
+      <div class="next-question">
+        <button type="button" class="next-question-btn btn" onclick="next()">
+          سوال بعدی
+        </button>
+      </div>
+    </div>
+    <div class="quiz-over-box custom-box hide">
+      <h1>نتیجه نهایی آزمون شما</h1>
+      <h4>تعداد کل سوالات: <span class="total-question"></span></h4>
+      <h4>تعداد سوالات پاسخ داده شده: <span class="total-attemp"></span></h4>
+      <h4>تعداد پاسخ درست: <span class="total-correct"></span></h4>
+      <h4>تعداد پاسخ غلط: <span class="total-wrong"></span></h4>
+      <h4>درصد شما: <span class="percentage"></span></h4>
+      <h4>درصد شما: <span class="total-score"></span></h4>
+      <button type="button" class="back-to-mainpage btn">
+        <a href="index.html">صفحه اصلی</a>
+      </button>
+      <button onclick="window.print()" class="print btn">
+        پرینت نتیجه
+      </button>
+    </div>
+    <script src="quiz.js"></script>
+    <script src="quizapp.js"></script>
+  </body>
+</html>
